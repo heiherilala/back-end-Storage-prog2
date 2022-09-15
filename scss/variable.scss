@@ -1,0 +1,95 @@
+$color_variant_dark: #332116 ;
+$color_variant_dark_hover: #332116cf ;
+$color_variant_dark_disabled: #332116 ;
+
+$color_variant_standard: #4f2f1c ;
+$color_variant_standard_hover: #4f2f1cca ;
+$color_variant_standard_disabled: #4f2f1c ;
+
+$color_variant_light: #774e3a ;
+$color_variant_light_hover: #624034 ;
+$color_variant_light_disabled: #774e3a ;
+
+$color_shadow: rgba(7, 7, 7, 0.2);
+$color_fond: hsla(0, 0%, 0%, 0.6) ;
+$color_background_ligtht: #f2f2f2 ;
+
+$color_refuse: #a53d3d ;
+$color_refuse_hover: #974444 ;
+
+$color_accept: #84817E ;
+$color_accept_hover: #A29787 ;
+
+$color_variant_3: #4f2f1c ;
+
+
+
+@mixin button-color($base, $hover, $active, $focus, $visited, $disabled) {
+    background-color: $base !important;
+    border-color: $base !important;
+    color: color_font($base) !important;
+    &:hover {
+        background-color: $hover !important; 
+        border-color: $hover !important; 
+        color: color_font($hover) !important;
+    }
+    &:active { 
+        background-color: $active !important; 
+        border-color: $active !important; 
+        color: color_font($active) !important;
+    }
+    &:focus {
+        background-color: $focus !important;
+        border-color: $focus !important; 
+        color: color_font($focus) !important;
+    }
+    &:visited {
+      background-color: $visited !important;
+      border-color: $visited !important; 
+      color: color_font($visited) !important;
+  }
+    &:disabled {
+      color: $disabled !important;
+      border-color: $disabled !important;
+      color: color_font($disabled) !important;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  @mixin dispay-flex($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center
+  }
+
+  @function color_font($bakground){
+    @if (lightness($bakground) > 50%){
+        @return #000;
+    } @else{
+        @return #fff;
+    }
+  }
+
+
+
+@mixin button-color-dark() {
+    @include button-color($color_variant_dark, $color_variant_dark_hover, $color_variant_dark, $color_variant_dark, $color_variant_dark, $color_variant_dark_disabled);
+  }
+
+@mixin button-color-light() {
+    @include button-color($color_variant_light, $color_variant_light_hover, $color_variant_light, $color_variant_light, $color_variant_light, $color_variant_light_disabled);
+  }
+
+@mixin button-color-standard() {
+    @include button-color($color_variant_standard, $color_variant_standard_hover, $color_variant_standard, $color_variant_standard, $color_variant_standard, $color_variant_standard_disabled);
+  }
+
+  @mixin button-color-accepted() {
+    @include button-color($color_accept, $color_accept_hover, $color_accept,$color_accept, $color_accept, $color_accept);
+  }
+
+  @mixin button-color-refused() {
+    @include button-color($color_refuse, $color_refuse_hover, $color_refuse,$color_refuse, $color_refuse, $color_refuse);
+  }

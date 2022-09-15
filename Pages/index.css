@@ -1,0 +1,159 @@
+
+.activBouton{
+    border-radius: 1em;
+    --whidht1: 30vw;
+    width: calc(var(--whidht1));
+    height: calc(var(--whidht1) * 0.7);
+    z-index: 90;
+    margin: 2em;
+}
+.nonActivBouton{
+  border-radius: 1em;
+  --whidht1: 30vw;
+  width: calc(var(--whidht1));
+  z-index: 90;
+  margin: 2em;
+}
+
+.headerPage{
+    margin-top: 3em;
+    margin-bottom: calc(5vw-2vh);
+    width: 100%;
+    text-align: center;
+}
+
+
+.responsivDiv{
+    width: 500px;
+    height: 100vw;
+}
+
+
+.imageSize{
+  width: 60vw !important;
+}
+
+
+
+  
+.donnePage{
+    height: 100%;
+    width: 60%;
+}
+
+.imagePreviw{
+    width: 100% !important;
+    display: block;
+}
+
+.contenerImage{
+    position: relative;
+    border-radius: 1em;
+    width: calc(90%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: brown;
+}
+
+.oneFace{
+    position:absolute;
+    overflow: visible !important;
+    flex: content;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(162, 165, 194, 0.29);
+    border-radius: 20%;
+    border: 1px rgb(183, 0, 255) double;
+}
+
+
+.oneFaceNotActive{
+    position:absolute;
+    overflow: visible !important;
+    flex: content;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(162, 165, 194, 0);
+    border-radius: 20%;
+    color: rgba(245, 245, 220, 0);
+    border: 1px rgba(183, 0, 255, 0.129) double;
+}
+
+.oneFaceActive{
+    position:absolute;
+    overflow: visible !important;
+    padding: 1%;
+    flex: content;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(117, 181, 126, 0.22);
+    color: rgba(0, 255, 68, 0.257);
+    border-radius: 20%;
+    border:double 2px rgb(0, 255, 68) ;
+}
+
+
+
+.oneFace:hover, .oneFaceNotActive:hover, .oneFaceActive:hover  {
+    background-color: rgba(255, 217, 0, 0.679);
+  }
+  
+  h1{
+    font-size:xx-large;
+  }
+
+  h2{
+    font-size: x-large;
+  }
+
+
+  .loadingCid{
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 200px;
+    width: 100%;
+  }
+
+  .list-group-item{
+    background-color: transparent;
+    text-align: justify;
+  }
+
+
+  .cursor{
+    cursor: pointer;
+  }
+
+  .carousel-control-prev, .carousel-control-next{
+    background-color: rgba(165, 122, 42, 0.664) !important;
+
+  }
+
+
+
+  .col{background-color: aquamarine;}
+
+  .carousel-indicators li{
+    border: #643a0bcc solid 0.5em;
+  }
+
+  .carousel-caption{
+    text-shadow: 0px 0px 25px #201202, 0px 0px 25px #201202, 0px 0px 25px #201202;
+  }
+
+
+@media screen and (max-width: 800px) {
+  .donnePage{
+      width: 90vw !important;
+      left: 5vw !important;
+  }
+  .imageSize{
+    width: 90vw !important;
+  }
+}
+
